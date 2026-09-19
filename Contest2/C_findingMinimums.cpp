@@ -1,21 +1,27 @@
-// #include <iostream>
-// #include <algorithm>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main(){
-//     int n,k;
-//     cin>>n>>k;
+int main()
+{
+    int n, k;
+    cin >> n >> k;
 
-//     int minimum;
+    int arr[100005];
 
-//     for(int i=0; i<n; i++){
-//         int count = 0;
-//         while (count != k)
-//         {
-//             min(i);
-//         }
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
 
-//     }
+    for (int i = 0; i < n; i += k)
+    {
+        int minimum = arr[i];
 
-//     return 0;
-// }
+        for (int j = i; j < i + k && j < n; j++)
+        {
+            minimum = min(minimum, arr[j]);
+        }
+        cout << minimum << " ";
+    }
+    return 0;
+}
