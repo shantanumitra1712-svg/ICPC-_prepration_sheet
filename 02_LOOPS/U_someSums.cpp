@@ -20,8 +20,8 @@ int main()
 
         if (a <= digitSum && b >= digitSum)
         {
-            // cout << i << endl;
-            answer += i;
+            cout << i << endl;
+            // answer += i;
         }
     }
 

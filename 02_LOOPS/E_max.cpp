@@ -9,7 +9,7 @@ int main()
     cin.tie(nullptr);
 
     int n;
-    long long max = -1;
+    long long max = 0;
 
     cin >> n;
 
