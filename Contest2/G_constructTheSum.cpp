@@ -4,36 +4,33 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int t;
+    cin >> t;
 
-    for (int i = 0; i < n; i++)
+    while (t--)
     {
-        int limit;
-        long long sum;
-        cin >> limit >> sum;
+        long long n, s;
+        cin >> n >> s;
 
         vector<long long> ans;
 
-        for (long long j = limit; j >= 1 && sum > 0; j--)
+        for (long long j = n; j >= 1 && s > 0; j--)
         {
-            if (j <= sum)
+            if (j <= s)
             {
-                sum -= j;
+                s -= j;
                 ans.push_back(j);
             }
         }
 
-        if (sum != 0)
+        if (s != 0)
         {
             cout << -1 << endl;
         }
         else
         {
             for (long long x : ans)
-            {
                 cout << x << " ";
-            }
             cout << endl;
         }
     }
