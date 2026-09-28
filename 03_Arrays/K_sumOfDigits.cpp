@@ -16,7 +16,6 @@ int main()
         digitSum += num[i] - '0';
     }
 
-    // unwanted line
     cout << digitSum;
     return 0;
 }
