@@ -16,7 +16,6 @@ int main()
         digitSum += num[i] - '0';
     }
 
-    // fuck my github it sucks
     cout << digitSum;
     return 0;
 }
