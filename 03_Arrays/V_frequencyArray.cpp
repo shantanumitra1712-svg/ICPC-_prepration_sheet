@@ -1,31 +1,25 @@
 #include <iostream>
 using namespace std;
 
+int freq[100005];
+
 int main()
 {
-    int n, m;
 
-    int arr[1005];
+    int n, m;
     cin >> n >> m;
 
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        int x;
+        cin >> x;
+        freq[x]++;
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= m; i++)
     {
-        int new_el;
-        int count = 0;
-        for (int j = 1; j <= m; j++)
-        {
-            int new_el = arr[j];
-            if (arr[i] == new_el)
-            {
-                count++;
-            }
-        }
-        cout << count;
+        cout << freq[i] << "\n";
     }
+
     return 0;
 }
